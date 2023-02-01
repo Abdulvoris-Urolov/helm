@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
           name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}" // # nginx:1.16.0
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}" 
           imagePullPolicy: {{ .Values.image.pullPolicy }} // # IfNoheltPresent
           ports:
             - name: http
