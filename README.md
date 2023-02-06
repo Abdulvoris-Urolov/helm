@@ -114,6 +114,32 @@ spec:
       port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.targetPort }}
 ```
+`.helmignore` faylimiz quyidagicha
+```
+# Patterns to ignore when building packages.
+# This supports shell glob matching, relative path matching, and
+# negation (prefixed with !). Only one pattern per line.
+.DS_Store
+# Common VCS dirs
+.git/
+.gitignore
+.bzr/
+.bzrignore
+.hg/
+.hgignore
+.svn/
+# Common backup files
+*.swp
+*.bak
+*.tmp
+*.orig
+*~
+# Various IDEs
+.project
+.idea/
+*.tmproj
+.vscode/
+```
 va fayllarimiz to'g'ri yozilganligiga ishonch hosil qilish uchun quyidagi buyruqni yozamiz
 ```
 helm lint nginx-chart nginx-chart
